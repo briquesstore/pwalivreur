@@ -1,7 +1,7 @@
 {
-  "name": "BRIKE Driver",
-  "short_name": "BRIKE Driver",
-  "description": "Application PWA des livreurs BRIKE.STORE",
+  "name": "Briques.store Livreur",
+  "short_name": "Briques.store",
+  "description": "Application PWA des livreurs Briques.store",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#111827",

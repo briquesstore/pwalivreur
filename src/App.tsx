@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Truck, Package, MapPin, CheckCircle, User, LogOut, Phone, Lock, AlertCircle, PenLine, Camera } from 'lucide-react'
+import { Package, MapPin, CheckCircle, User, LogOut, Phone, Lock, AlertCircle, PenLine, Camera } from 'lucide-react'
 import { isLoggedIn, login, logout } from './services/auth'
 import { getDeliveries, verifyCode, startDelivery, arriveDelivery, completeDelivery } from './services/delivery'
 import type { CompleteDeliveryPayload } from './services/delivery'
@@ -78,8 +78,8 @@ function App() {
       <div className="flex flex-col h-full p-6">
         <div className="flex-1 flex flex-col justify-center max-w-sm mx-auto w-full">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <Truck className="w-10 h-10 text-primary" />
-            <h1 className="text-2xl font-bold text-text">BRIKE Driver</h1>
+            <img src="/logo.png" alt="Briques.store" className="w-10 h-10" />
+            <h1 className="text-2xl font-bold text-text">Briques.store Livreur</h1>
           </div>
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
@@ -135,8 +135,8 @@ function App() {
     <div className="flex flex-col h-full">
       <header className="bg-primary text-white p-4 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-2">
-          <Truck className="w-6 h-6" />
-          <h1 className="text-lg font-bold">BRIKE Driver</h1>
+          <img src="/logo.png" alt="Briques.store" className="w-6 h-6" />
+          <h1 className="text-lg font-bold">Briques.store Livreur</h1>
         </div>
         <button onClick={handleLogout} className="text-white/90">
           <LogOut className="w-5 h-5" />
@@ -542,8 +542,6 @@ function DeliveryDetail({
             disabled={!canComplete()}
             className="w-full py-3 bg-success text-white rounded-xl font-semibold disabled:opacity-50"
           >
-
-          
             Valider la livraison
           </button>
         </div>
