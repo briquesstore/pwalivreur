@@ -542,6 +542,8 @@ function DeliveryDetail({
             disabled={!canComplete()}
             className="w-full py-3 bg-success text-white rounded-xl font-semibold disabled:opacity-50"
           >
+
+          
             Valider la livraison
           </button>
         </div>
