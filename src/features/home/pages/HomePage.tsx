@@ -1,4 +1,4 @@
-import type { Delivery } from '../types'
+import type { Delivery } from '@/features/deliveries/types'
 
 interface HomePageProps {
   deliveries: Delivery[]

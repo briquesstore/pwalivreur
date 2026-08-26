@@ -1,5 +1,5 @@
 import { User, LogOut } from 'lucide-react'
-import { logout } from '../services/auth'
+import { logout } from '@/features/auth/services/auth'
 
 interface ProfilePageProps {
   onLogout: () => void

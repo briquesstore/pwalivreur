@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { isLoggedIn } from './services/auth'
-import { getDeliveries } from './services/delivery'
-import type { Delivery } from './types'
+import { isLoggedIn } from '@/features/auth/services/auth'
+import { getDeliveries } from '@/features/deliveries/services/delivery'
+import type { Delivery } from '@/features/deliveries/types'
 
-import Layout from './components/Layout'
-import LoginPage from './pages/LoginPage'
-import HomePage from './pages/HomePage'
-import DeliveriesPage from './pages/DeliveriesPage'
-import DeliveryDetailPage from './pages/DeliveryDetailPage'
-import ProfilePage from './pages/ProfilePage'
+import Layout from '@/components/Layout'
+import LoginPage from '@/features/auth/pages/LoginPage'
+import HomePage from '@/features/home/pages/HomePage'
+import DeliveriesPage from '@/features/deliveries/pages/DeliveriesPage'
+import DeliveryDetailPage from '@/features/deliveries/pages/DeliveryDetailPage'
+import ProfilePage from '@/features/profile/pages/ProfilePage'
 
 function App() {
   const [authenticated, setAuthenticated] = useState<boolean | null>(null)

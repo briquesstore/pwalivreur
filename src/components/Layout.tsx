@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { LogOut } from 'lucide-react'
-import { useAuth } from '../hooks/useAuth'
+import { useAuth } from '@/features/auth/hooks/useAuth'
 import BottomNav from './BottomNav'
 
 export default function Layout() {
