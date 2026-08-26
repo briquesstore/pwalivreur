@@ -19,7 +19,6 @@ function App() {
 
   useEffect(() => {
     setAuthenticated(isLoggedIn())
-    if (isLoggedIn()) loadDeliveries()
   }, [])
 
   async function loadDeliveries() {
@@ -33,11 +32,6 @@ function App() {
     } finally {
       setLoading(false)
     }
-  }
-
-  function handleLogout() {
-    setAuthenticated(false)
-    setDeliveries([])
   }
 
   function handleSelectDelivery(d: Delivery) {
@@ -84,7 +78,7 @@ function App() {
         <Route
           path="/profile"
           element={
-            authenticated ? <ProfilePage onLogout={handleLogout} /> : <Navigate to="/login" />
+            authenticated ? <ProfilePage /> : <Navigate to="/login" />
           }
         />
       </Route>
