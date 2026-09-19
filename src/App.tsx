@@ -34,11 +34,15 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    if (authenticated) void loadDeliveries()
+  }, [authenticated])
+
+  if (authenticated === null) return null
+
   function handleSelectDelivery(d: Delivery) {
     window.location.href = `/deliveries/${d.id}`
   }
-
-  if (authenticated === null) return null
 
   return (
     <Routes>
